@@ -36,7 +36,7 @@ h3{
     font-family: 'Poppins', sans-serif;
     background-color: rgb(41, 41, 41);
     color: white;
-    border: 2px solid wheat;
+    border: 2px solid white;
     outline: 1px solid black;
 }
 
@@ -58,6 +58,7 @@ h3{
 
     #textbox{
     width: 80%;
+    height: 40vh;
     font-size: medium;
 
 }
