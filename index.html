@@ -1,0 +1,61 @@
+<!-- WORD COUNTER -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Word Counter</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Word & Character Counter</h1>
+
+        <h3>
+            <span id="word">0</span> Words and
+            <span id="char">0</span> Characters
+
+        </h3>
+
+        <textarea id="textbox" cols="30" rows="10"></textarea>
+
+
+        
+    </div>
+
+
+    <script>
+
+
+        let textbox = document.getElementById("textbox");
+
+        textbox.addEventListener('input', function () {
+            let text = this.value;
+            let char = text.length;
+            document.getElementById("char").innerHTML = char;
+
+
+            text = text.trim();
+
+            let words = text.split(" ");
+
+            let cleanwords = words.filter(function (element) {
+                return element != "";
+            });
+
+            document.getElementById("word").innerHTML = cleanwords.length;
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
